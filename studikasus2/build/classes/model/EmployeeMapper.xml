@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="model.EmployeeMapper">
+    <insert id="insertEmployee" parameterType="model.Employee">
+        INSERT INTO employees (id, name, position, department, salary)
+        VALUES (#{id}, #{name}, #{position}, #{department}, #{salary});
+    </insert>
+
+    <select id="getAllEmployees" resultType="model.Employee">
+        SELECT * FROM employees;
+    </select>
+</mapper>
