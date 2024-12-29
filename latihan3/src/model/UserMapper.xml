@@ -1,0 +1,4 @@
+<select id="getAllUsers" resultType="model.User">
+    SELECT id, name, email
+    FROM users
+</select>
